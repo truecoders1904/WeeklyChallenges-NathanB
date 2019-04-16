@@ -38,7 +38,7 @@ namespace ChallengesWithTestsMarkVII.Tests
         [InlineData(-10, -7, -3)]
         [InlineData(-10, -15, 5)]
         [InlineData(5.5, 1.2, 4.3)]
-        [InlineData(0.7, 0.35, 0.45)]
+        [InlineData(0.7, 0.35, 0.35)]
         [InlineData(-2.2, 1.1, -3.3)]
         public void Subtract(double minuend, double subtrahend, double expectedDifference)
         {
@@ -49,7 +49,7 @@ namespace ChallengesWithTestsMarkVII.Tests
             double actual = challenger.Subtract(minuend, subtrahend);
 
             // Assert
-            Assert.Equal(expectedDifference, actual);
+            Assert.Equal(Math.Round(expectedDifference, 2), Math.Round(actual, 2));
         }
 
         [Theory]
