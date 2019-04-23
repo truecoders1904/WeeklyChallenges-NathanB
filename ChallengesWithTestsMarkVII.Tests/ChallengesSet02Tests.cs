@@ -30,7 +30,11 @@ namespace ChallengesWithTestsMarkVII.Tests
         {
             // Arrange
             ChallengesSet02 challenger = new ChallengesSet02();
+<<<<<<< HEAD
             string nonLetters = "0123456789`~!@#$%^&*()-_=+[{]}\\|;:'\",<.>/?\u1234\u4321\u1111\u2222";
+=======
+            string nonLetters = "0123456789`~!@#$%^&*()-_=+[{]}\\|;:'\",<.>/?\u2222";
+>>>>>>> dcd7e7a236666c2adb986c86fac531575dc06e53
 
             // Check all letters
             foreach (char letter in nonLetters)
