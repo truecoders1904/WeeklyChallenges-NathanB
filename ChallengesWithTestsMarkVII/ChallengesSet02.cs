@@ -34,7 +34,7 @@ namespace ChallengesWithTestsMarkVII
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-           if (numbers == null)
+           if (numbers == null || numbers.Count() == 0)
             {
                 return 0;
             }
