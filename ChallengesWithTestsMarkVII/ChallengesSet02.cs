@@ -8,7 +8,7 @@ namespace ChallengesWithTestsMarkVII
     {
         public bool CharacterIsALetter(char c)
         {
-            if (Char.IsLetter(c) == true)
+            if (char.IsLetter(c) == true)
             {
                 return true;
             }
@@ -17,9 +17,7 @@ namespace ChallengesWithTestsMarkVII
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            int countOfElements = vals.Length;
-            return countOfElements % 2 == 0;
- 
+            return vals.Length % 2 == 0; 
         }
 
         public bool IsNumberEven(int number)
