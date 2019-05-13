@@ -62,17 +62,19 @@ namespace ChallengesWithTestsMarkVII
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
         {
-            throw new NotImplementedException();
+            biz.Name = "TrueCoders";
         }
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
         {
-            throw new NotImplementedException();
+            return sideLength1 < sideLength2 + sideLength3
+                && sideLength2 < sideLength1 + sideLength3
+                && sideLength3 < sideLength2 + sideLength1;
         }
 
         public bool IsStringANumber(string input)
         {
-            throw new NotImplementedException();
+            return double.TryParse(input, out double i);
         }
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
@@ -92,12 +94,43 @@ namespace ChallengesWithTestsMarkVII
 
         public double AverageEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            double sumOfEvens = 0;
+            double evenCount = 0;
+
+            if (numbers == null || numbers.Length == 0)
+            {
+                return 0;
+            }
+
+            foreach (var num in numbers)
+            {
+                if (num % 2 == 0)
+                {
+                    sumOfEvens += num;
+                    evenCount += 1;
+                }
+            }
+            if (evenCount >= 1)
+            {
+                return sumOfEvens / evenCount;
+            }
+            return evenCount;
         }
 
         public int Factorial(int number)
         {
-            throw new NotImplementedException();
+            if (number < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            int factorial = 1;
+
+            for (int i = 1; i < number +1; i++)
+            {
+                factorial = i * factorial;
+            }
+            return factorial;
         }
     }
 }
