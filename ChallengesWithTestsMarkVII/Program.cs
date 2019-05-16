@@ -8,14 +8,17 @@ namespace ChallengesWithTestsMarkVII
     {
         static void Main(string[] args)
         {
-            ChallengesSet03 challengesSet03 = new ChallengesSet03();
+            ChallengesSet05 challengesSet05 = new ChallengesSet05();
 
-            int[] odds = Enumerable.Range(0, 50).Where(x => x % 2 == 1).ToArray();
-            foreach (var odd in odds)
-            {
-                Console.WriteLine(odd);
+            string[] words = new string[5];
+            words[0] = "This";
+            words[1] = "is";
+            words[2] = "";
+            words[3] = " ";
+            words[4] = "a";
+           
 
-            }
+            Console.WriteLine(challengesSet05.TurnWordsIntoSentence(words));
         }
     }
 }

@@ -8,7 +8,6 @@ namespace ChallengesWithTestsMarkVII
     {
         public int AddEvenSubtractOdd(int[] numbers)
         {
-            // w/o LINQ
             int total = 0;
             foreach (int num in numbers)
             {
