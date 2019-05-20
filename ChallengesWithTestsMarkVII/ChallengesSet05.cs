@@ -123,7 +123,7 @@ namespace ChallengesWithTestsMarkVII
             {
                 for (int k = 1; k < nums.Length; k++)
                 {
-                    if((nums[i]) + (nums[k]) == targetNumber)
+                    if(nums[i] + nums[k] == targetNumber && i != k)
                     {
                         return true;
                     }
