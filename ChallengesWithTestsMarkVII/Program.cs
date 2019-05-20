@@ -10,15 +10,16 @@ namespace ChallengesWithTestsMarkVII
         {
             ChallengesSet05 challengesSet05 = new ChallengesSet05();
 
-            string[] words = new string[5];
-            words[0] = "This";
-            words[1] = "is";
-            words[2] = "";
-            words[3] = " ";
-            words[4] = "a";
-           
+            //var test = new[] { 5, -2, 4, 6, 8 };
 
-            Console.WriteLine(challengesSet05.TurnWordsIntoSentence(words));
+
+            //Console.WriteLine(challengesSet05.TwoDifferentElementsInArrayCanSumToTargetNumber(test, 8));
+
+            string[] test2 = new string[] {"this", "  ", "is", "a", "test", "."};
+
+            string print = challengesSet05.TurnWordsIntoSentence(test2);
+
+            Console.WriteLine(print);
         }
     }
 }

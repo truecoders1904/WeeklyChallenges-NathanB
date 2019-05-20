@@ -7,12 +7,27 @@ namespace ChallengesWithTestsMarkVII
     {
         public int GetNextNumberDivisibleByN(int startNumber, int n)
         {
-            throw new NotImplementedException();
+            for (int i = startNumber; i < 10000000; i++)
+            {
+                if (i % n == 0 && i > startNumber)
+                {
+                    return i;
+                }
+            }
+            return 0;
         }
 
         public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
         {
-            throw new NotImplementedException();
+            Business business = new Business();
+
+            for (int i = 0; i < businesses.Length; i++)
+            {
+                if (businesses[i].TotalRevenue == 0d)
+                {
+                    businesses[i].Name = "CLOSED";
+                }
+            }
         }
 
         public bool IsAscendingOrder(int[] numbers)
@@ -39,26 +54,49 @@ namespace ChallengesWithTestsMarkVII
 
         public int SumElementsThatFollowAnEven(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+                return 0;
+
+            int SumOfElementsAfterAnEven = 0;
+
+            for (int i = 0; i < numbers.Length-1; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    SumOfElementsAfterAnEven +=  numbers[i + 1];
+                }
+            }
+            return SumOfElementsAfterAnEven;
         }
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            string result = ""; 
+            if (words == null || words.Length == 0)
+            {
+                return "";
+            }
+            List<string> makeSentence = new List<string>();
 
             for (int i = 0; i < words.Length; i++)
             {
-                if (String.IsNullOrWhiteSpace(words[i]))
+                if (String.IsNullOrWhiteSpace(words[i]) == false)
                 {
-
-                }
-                else
-                {
-                    result = String.Join(" ", words);
+                    words[i] = words[i].Trim();
+                    makeSentence.Add(words[i]);
                 }
             }
-            return result + ".";
 
+            string result = "";
+
+            for (int i = 0; i < makeSentence.Count - 1; i++)
+            {
+                result = result + makeSentence[i] + " ";
+            }
+
+            if (makeSentence.Count <= 1)
+                return "";
+
+            return result + makeSentence[makeSentence.Count - 1] + ".";
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
@@ -81,7 +119,17 @@ namespace ChallengesWithTestsMarkVII
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int k = 1; k < nums.Length; k++)
+                {
+                    if((nums[i]) + (nums[k]) == targetNumber)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
     }
 }
