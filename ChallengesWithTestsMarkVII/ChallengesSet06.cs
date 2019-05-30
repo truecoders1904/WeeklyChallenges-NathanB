@@ -23,17 +23,15 @@ namespace ChallengesWithTestsMarkVII
                 }
                 return doesContain;
             }
-           //else
-            //{
-                foreach (var wrd in words)
+            foreach (var wrd in words)
+            {
+                if (wrd != null && wrd == word)
                 {
-                    if (wrd != null && wrd == word)
-                    {
-                        doesContain = true;
-                    }
+                    doesContain = true;
                 }
-                return doesContain;
-            //}
+            }
+            return doesContain;
+          
         }
 
         public bool IsPrimeNumber(int num)
